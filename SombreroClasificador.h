@@ -13,7 +13,7 @@ class SombreroClasificador
 		
 	public:
 		SombreroClasificador();
-		ClaseHogwarts* clasificar_magos_nuevos(vector<Mago*>,int);
+		ClaseHogwarts* clasificarMagos(vector<Mago*>,int);
 		
 
 };
