@@ -1,26 +1,28 @@
 #include "SombreroClasificador.h"
-ClaseHogwarts* SombreroClasificador::clasificarMagos(vector<Mago*> lista,int y){
+ClaseHogwarts* SombreroClasificador::clasificarMagos(vector<Mago*> Magos,int y){
 	ClaseHogwarts* retval=new ClaseHogwarts(y);
 	int conts=0,contr=0,conth=0,contg=0;
-	for(int i=0;i<lista.size();i++){
-		if(typeid( *lista[i])==typeid(MagoSlytherin)){
-			MagoSlytherin* magos=dynamic_cast<MagoSlytherin*>(lista[i]);
+	
+	
+	for(int i=0;i<Magos.size();i++){
+		if(typeid( *Magos[i])==typeid(MagoSlytherin)){
+			MagoSlytherin* magos=dynamic_cast<MagoSlytherin*>(Magos[i]);
 			retval->addMagoS(magos);
 			conts++;
 		}
-		if(typeid( *lista[i])==typeid(MagoHufflepuff)){
-			MagoHufflepuff* magoh=dynamic_cast<MagoHufflepuff*>(lista[i]);
+		if(typeid( *Magos[i])==typeid(MagoHufflepuff)){
+			MagoHufflepuff* magoh=dynamic_cast<MagoHufflepuff*>(Magos[i]);
 			retval->addMagoH(magoh);
 			conth++;
 		}
-		if(typeid( *lista[i])==typeid(MagoRavenclaw)){
-			MagoRavenclaw* magor=dynamic_cast<MagoRavenclaw*>(lista[i]);
+		if(typeid( *Magos[i])==typeid(MagoRavenclaw)){
+			MagoRavenclaw* magor=dynamic_cast<MagoRavenclaw*>(Magos[i]);
 			retval->addMagoR(magor);
 			contr++;
 		}
 					
-		if(typeid( *lista[i])==typeid(MagoGryffindor)){
-			MagoGryffindor* magog=dynamic_cast<MagoGryffindor*>(lista[i]);
+		if(typeid( *Magos[i])==typeid(MagoGryffindor)){
+			MagoGryffindor* magog=dynamic_cast<MagoGryffindor*>(Magos[i]);
 			retval->addMagoG(magog);
 			contg++;
 		}

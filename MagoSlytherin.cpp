@@ -1,6 +1,5 @@
 #include "MagoSlytherin.h"
-#include <stdio.h>      /* printf, scanf, puts, NULL */
-#include <stdlib.h>     /* srand, rand */
+#include <stdio.h>      
 #include <time.h>  
 string MagoSlytherin::toString(){
 	

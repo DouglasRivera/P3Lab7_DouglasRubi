@@ -17,7 +17,7 @@ int main() {
 	int opcion;
 	vector<Mago*> Magos;
 	ClaseHogwarts* Hogwarts;
-	SombreroClasificador* sombrero=new SombreroClasificador;
+	SombreroClasificador* sombrero = new SombreroClasificador;
 	
 	while((opcion = menu()) != 4) {
 		switch (opcion) {
