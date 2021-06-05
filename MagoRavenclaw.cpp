@@ -7,12 +7,12 @@ string MagoRavenclaw::toString(){
 	
 }
 MagoRavenclaw::MagoRavenclaw(){
-	srand (time(NULL));
-	this->creatividad=rand() % 21+ 80;
+	srand (time(NULL));	
 	this->astucia=rand() % 101;
 	this->inteligencia=rand() % 101;
 	this->lealtad=rand() % 21+ 80;
 	this->valentia=rand() % 101;
+	this->creatividad=rand() % 21+ 80;
 }
 int MagoRavenclaw::getCreatividad(){
 	return this->creatividad;

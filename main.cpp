@@ -1,10 +1,24 @@
 #include <iostream>
-
+#include <stdio.h>
+#include <stdlib.h>     
+#include <time.h> 
+#include "Mago.h"
+#include <typeinfo>
+#include "MagoHufflepuff.h"
+#include "MagoRavenclaw.h"
+#include "MagoSlytherin.h"
+#include "MagoGryffindor.h"
+#include "ClaseHogwarts.h" 
+#include "SombreroClasificador.h"
 using namespace std;
 int menu();
-
+    
 int main() {
 	int opcion;
+	vector<Mago*> Magos;
+	ClaseHogwarts* Hogwarts;
+	SombreroClasificador* sombrero=new SombreroClasificador;
+	
 	while((opcion = menu()) != 4) {
 		switch (opcion) {
 			case 1: {
@@ -12,11 +26,29 @@ int main() {
 				break;
 			}
 			case 2: {
-				
+				cout<<"La casa quedo de la siguiente manera"<<endl;
+				Hogwarts->print();
 				break;
 			}
 			case 3: {
-				
+				cout<<"Cualidades de los magos"<<endl;
+				int conts=0,contr=0,conth=0,contg=0;
+				for(int i=0;i<Magos.size();i++){
+					if(typeid(*Magos[i])==typeid(MagoSlytherin)){
+						conts++;
+					}
+					 if(typeid(*Magos[i])==typeid(MagoHufflepuff)){
+						conth++;
+					}
+					if(typeid(*Magos[i])==typeid(MagoRavenclaw)){
+						contr++;
+					}
+					
+					 if(typeid(*Magos[i])==typeid(MagoGryffindor)){
+						contg++;
+					}
+				}
+				Hogwarts->promediohabilidades(contg,conts,conth,contr);	
 				break;
 			}
 			case 4: {

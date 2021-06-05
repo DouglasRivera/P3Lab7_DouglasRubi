@@ -5,14 +5,17 @@
 
 class MagoRavenclaw : public Mago
 {
+	
+	public:
+	    virtual string toString();
+		MagoRavenclaw();		
+		int getCreatividad();
+		
+	protected:
+	
 	private:
 		int creatividad;
 		
-	public:
-		MagoRavenclaw();
-		virtual string toString();
-		int getCreatividad();
-	protected:
 };
 
 #endif

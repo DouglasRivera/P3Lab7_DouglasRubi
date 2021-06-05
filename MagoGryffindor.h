@@ -5,13 +5,16 @@
 
 class MagoGryffindor : public Mago
 {
+	
+	public:
+	virtual string toString();
+	MagoGryffindor();
+	int getAtrevimiento();
+	
+	protected:
+	
 	private:
 		int atrevimiento;
-	public:
-		MagoGryffindor();
-		virtual string toString();
-		int getAtrevimiento();
-	protected:
 };
 
 #endif
